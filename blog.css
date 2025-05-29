@@ -2,10 +2,10 @@
 
 :root {
   --bs-body-bg: #0f172a;
-  --bs-body-color: #f8fafc;
+  --bs-body-color: #e2e8f0;
   --bs-primary: #3b82f6;
-  --bs-link-color: #60a5fa;
-  --bs-link-hover-color: #3b82f6;
+  --bs-link-color: #38bdf8;
+  --bs-link-hover-color: #0ea5e9;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 }
 
 .border-bottom {
-  border-color: #1e293b !important;
+  border-color: #334155 !important;
 }
 
 .blog-header-logo {
@@ -69,6 +69,20 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #727272;
+}
+
+.blog-post-meta a,
+.nav-link,
+.p-4 a {
+  color: var(--bs-link-color) !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-post-meta a:hover,
+.nav-link:hover,
+.p-4 a:hover {
+  color: var(--bs-link-hover-color) !important;
 }
 
 .bd-placeholder-img rect {
@@ -139,7 +153,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Lista de enlaces */
 .p-4 .list-unstyled li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.p-4 .list-unstyled li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p-4 .list-unstyled li a i {
+  font-size: 1.1rem;
 }
 
 /* Títulos de sección */
