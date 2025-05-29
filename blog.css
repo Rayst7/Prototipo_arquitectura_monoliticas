@@ -2,7 +2,10 @@
 
 :root {
   --bs-body-bg: #0f172a;
-  --bs-body-color: #e2e8f0;
+  --bs-body-color: #f8fafc;
+  --bs-primary: #3b82f6;
+  --bs-link-color: #60a5fa;
+  --bs-link-hover-color: #3b82f6;
 }
 
 body {
@@ -23,12 +26,11 @@ body {
 }
 
 .border-bottom {
-  border-color: #2d3748 !important;
+  border-color: #1e293b !important;
 }
 
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 3rem;
   background: linear-gradient(45deg, #60a5fa, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,40 +81,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .tech-card {
   background-color: #1e293b !important;
-  border-color: #2d3748 !important;
+  border: 1px solid #2d3748 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .tech-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.2);
 }
 
 /* Sidebar social styles */
 .social-sidebar {
   position: fixed;
-  left: 20px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 1000;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  color: #60a5fa;
+  font-size: 24px;
   transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
   transform: scale(1.2);
+  color: #3b82f6;
 }
 
 .github { background: #24292e; }
@@ -126,4 +124,31 @@ h1, h2, h3, h4, h5, h6 {
 .nav-underline .nav-link.active {
   color: #60a5fa !important;
   border-bottom: 2px solid #60a5fa;
+}
+
+/* Enlaces */
+.p-4 a {
+  color: var(--bs-link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.p-4 a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+/* Lista de enlaces */
+.p-4 .list-unstyled li {
+  margin-bottom: 0.5rem;
+}
+
+/* Títulos de sección */
+.fst-italic {
+  color: #94a3b8;
+  border-bottom-color: #1e293b;
+}
+
+/* Cards y contenedores */
+.bg-body-tertiary {
+  background-color: #1e293b !important;
 }
