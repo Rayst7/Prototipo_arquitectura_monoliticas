@@ -1,39 +1,34 @@
-.tech-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Variables globales centralizadas */
+:root {
+  --main-transition: 0.3s ease;
+  --tech-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  --accent-color: #60a5fa;
+  --secondary-color: #34d399;
 }
 
-.tech-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
+/* Estilos monolíticos centralizados */
+.monolithic-theme {
+  /* Efectos de tarjetas */
+  .tech-card {
+    transition: transform var(--main-transition), 
+                box-shadow var(--main-transition);
+  }
+  
+  .tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--tech-shadow);
+  }
 
-.nav-link {
-  position: relative;
-  transition: color 0.3s ease;
-}
+  /* Efectos de navegación */
+  .nav-link {
+    position: relative;
+    transition: color var(--main-transition);
+  }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #60a5fa;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.blog-header-logo {
-  background: linear-gradient(90deg, #60a5fa, #34d399);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease;
-}
-
-.blog-header-logo:hover {
-  opacity: 0.8;
+  /* Efectos de logo */
+  .blog-header-logo {
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
