@@ -3,8 +3,11 @@
 :root {
   --bs-body-bg: #0f172a;
   --bs-body-color: #e2e8f0;
-  --bs-primary: #3b82f6;
-  --bs-secondary: #64748b;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 .bg-body-secondary {
@@ -25,10 +28,12 @@
 
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
-  background: linear-gradient(90deg, var(--bs-primary), #60a5fa);
+  font-size: 3rem;
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .blog-header-logo:hover {
@@ -75,6 +80,12 @@ h1, h2, h3, h4, h5, h6 {
 .tech-card {
   background-color: #1e293b !important;
   border-color: #2d3748 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Sidebar social styles */
@@ -108,6 +119,11 @@ h1, h2, h3, h4, h5, h6 {
 .twitter { background: #1da1f2; }
 .linkedin { background: #0077b5; }
 
+.nav-underline .nav-link {
+  color: #94a3b8 !important;
+}
+
 .nav-underline .nav-link.active {
-  border-bottom-color: var(--bs-primary);
+  color: #60a5fa !important;
+  border-bottom: 2px solid #60a5fa;
 }
