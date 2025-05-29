@@ -1,3 +1,5 @@
-name: TechBlog
+title: TechBlog
+description: Blog de tecnologías y programación
 baseurl: ""
 url: ""
+theme: jekyll-theme-minimal

@@ -1,11 +1,10 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
 :root {
-  --bs-body-bg: #1a1f2e;
+  --bs-body-bg: #0f172a;
   --bs-body-color: #e2e8f0;
   --bs-primary: #3b82f6;
-  --bs-success: #10b981;
-  --bs-border-color: #2d3748;
+  --bs-secondary: #64748b;
 }
 
 .bg-body-secondary {
@@ -25,9 +24,11 @@
 }
 
 .blog-header-logo {
-  color: #60a5fa !important;
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
+  background: linear-gradient(90deg, var(--bs-primary), #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .blog-header-logo:hover {
@@ -72,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-card {
-  background-color: #1e293b;
+  background-color: #1e293b !important;
+  border-color: #2d3748 !important;
 }
 
 /* Sidebar social styles */
@@ -105,3 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 .github { background: #24292e; }
 .twitter { background: #1da1f2; }
 .linkedin { background: #0077b5; }
+
+.nav-underline .nav-link.active {
+  border-bottom-color: var(--bs-primary);
+}
